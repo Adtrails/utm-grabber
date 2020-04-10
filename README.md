@@ -2,7 +2,7 @@
 
 Contributors: upworksanjeev
 
-Tags: UTM, GCLID, Contact Form 7, Gravity Form
+Tags: UTM, GCLID, Contact Form 7, Gravity Form 
 
 Requires at least: 5.0
 
@@ -61,10 +61,6 @@ ad_utmgrabber_zapier
 ```
 
 ## Changelog
-
-### version 1.1.0 
-
-Test Plugin next version version
 
 
 ### version 1.0.0 
