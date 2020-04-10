@@ -23,7 +23,7 @@
  */
 class UtmvGrabber_Updater {
 
-	public static $access_token = 'b6960f6cbfe239046e73bc8411255c492a5524d8';
+	public static $access_token = 'ea63d211c73740aa644c7916c359e006c4f4d60e';
 	public static $endpoint = 'https://api.github.com/repos/Adtrails/utm-grabber/releases/latest';
 	public static $plugin_dir; 
 
