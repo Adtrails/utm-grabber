@@ -24,7 +24,7 @@
 class UtmvGrabber_Updater {
 
 	public static $access_token = 'b6960f6cbfe239046e73bc8411255c492a5524d8';
-	public static $endpoint = 'https://api.github.com/repos/fullstackdevloper/ad_utmv_grabber_paid/releases/latest';
+	public static $endpoint = 'https://api.github.com/repos/Adtrails/utm-grabber/releases/latest';
 	public static $plugin_dir; 
 
 	public static $plugin_file;
@@ -173,7 +173,7 @@ class UtmvGrabber_Updater {
 			$response = new stdClass;
 			$response->new_version = get_option( 'utmvgrabber_newest_version' );
 			$response->slug = '/'.self::$plugin_file;
-			$response->url = add_query_arg( array( 'access_token' => self::$access_token ), 'https://github.com/fullstackdevloper/ad_utmv_grabber_paid' );
+			$response->url = add_query_arg( array( 'access_token' => self::$access_token ), 'https://github.com/Adtrails/utm-grabber' );
 			$response->package = get_option( 'utmvgrabber_zip_url' );
 
 			// If response is false, don't alter the transient

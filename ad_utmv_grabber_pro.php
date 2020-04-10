@@ -4,7 +4,7 @@
  * Plugin Name: AdTrails UTM Grabber Pro
  * Plugin URI: https://www.adtrails.com/pricing/
  * Description: AdTrails UTM Grabber Premium pushes UTM/GCLID info CF7, Gravity Forms, WP Forms, and Ninja Forms.
- * Version: 1.0.0
+ * Version: 1.1.0
  * Author:  Actuate Media
  * Author URI: https://www.adtrails.com
  * Text Domain: ad_utmv_grabber_pro
