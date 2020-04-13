@@ -49,7 +49,7 @@ function ad_error_notice() {
 				$install_url = "https://www.adtrails.com/wp-content/uploads/2020/04/ad_utmv_grabber.zip";
 				
 				$message = '<p>' . __( 'AdTrails UTM Grabber Pro is not working because you need to install the AdTrails UTM Grabber FREE plugin.', 'ad_utmv_grabber_pro' ) . '</p>';
-				$message .= '<p>' . sprintf( '<a href="%s" class="button-primary">%s</a>', $install_url, __( 'Install AdTrails UTM Grabber FREE Now', 'ad_utmv_grabber_pro' ) ) . '</p>';
+				$message .= '<p>' . sprintf( '<a href="%s" class="button-primary">%s</a>', $install_url, __( 'Download AdTrails UTM Grabber FREE', 'ad_utmv_grabber_pro' ) ) . '</p>';
 				echo $message;
 			}
 		?>		
