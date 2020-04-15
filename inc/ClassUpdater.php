@@ -80,10 +80,15 @@ class UtmvGrabber_Updater {
 		
 		$endpoint = self::$endpoint;
 		$access_token = self::$access_token;
-		$url = $endpoint . '?access_token=' . $access_token;
-		$request = wp_remote_get( $url, array(
+		$url = $endpoint;
+/* 		$request = wp_remote_get( $url, array(
 			'timeout' => 120
-		));
+		)); */
+		$request = wp_remote_get( $url ,
+             array( 'timeout' => 120,
+            'headers' => array( 'access_token' => $access_token) 
+        ));
+		
 		if ( ! is_wp_error( $request ) ) {
 			
 			$response = json_decode($request['body'], true);
@@ -122,7 +127,7 @@ class UtmvGrabber_Updater {
 			'slug'         => 'utmvgrabber',
 			'new_version'  => get_option( 'utmvgrabber_newest_version' ), // The newest version
 			'url'          => 'https://www.adtrails.com', // Informational
-			'package'      => get_option( 'utmvgrabber_zip_url' ) . '?access_token=' . self::$access_token 
+			'package'      => get_option( 'utmvgrabber_zip_url' ) 
 		);
 		return $update_plugins;
 	}
@@ -150,7 +155,7 @@ class UtmvGrabber_Updater {
 		$response->downloaded   = 0;
 		$response->last_updated = '';
 		$response->sections = array( 'description' => 'Test' );
-		$response->download_link = get_option( 'utmvgrabber_zip_url' ) . '?access_token=' . self::$access_token;
+		$response->download_link = get_option( 'utmvgrabber_zip_url' );
 		return $response;
 	}
 
@@ -173,7 +178,7 @@ class UtmvGrabber_Updater {
 			$response = new stdClass;
 			$response->new_version = get_option( 'utmvgrabber_newest_version' );
 			$response->slug = '/'.self::$plugin_file;
-			$response->url = add_query_arg( array( 'access_token' => self::$access_token ), 'https://github.com/Adtrails/utm-grabber' );
+			$response->url = add_query_arg( array( 'access_token' => self::$access_token ), 'https://github.com/Adtrails/utm-grabber/' );
 			$response->package = get_option( 'utmvgrabber_zip_url' );
 
 			// If response is false, don't alter the transient

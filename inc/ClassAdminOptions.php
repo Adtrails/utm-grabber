@@ -116,7 +116,7 @@ class UtmvGrabberProOptions {
         ?>	<label>Licence Key : </label>	
         <input type='text' style="width:70%; min-width:300px;" id="ad_api_key" name='utmv_grabber_paid_key' value='<?php print get_option('utmv_grabber_paid_key'); ?>' required>
 		<?php //wp_nonce_field( 'edd_sample_nonce', 'edd_sample_nonce' ); ?>
-		<input type='button' id="ad_licence_key" name='authorized_api_key' onclick="UtmvGrabberProAdmin.authorizedKey();" class="button button-primary" value='Authorized'>
+		<input type='button' id="ad_licence_key" name='authorized_api_key' onclick="UtmvGrabberProAdmin.authorizedKey();" class="button button-primary" value='Activate'>
 		<h3 class="keyAuthorizeMessage"></h3>
         <?php
     }

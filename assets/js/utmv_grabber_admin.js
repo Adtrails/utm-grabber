@@ -35,6 +35,8 @@ var UtmvGrabberProAdmin;
 				success : function(data) {
 					if(data.success == true){
 						$this.insertKeyDB(key, data.license);
+						$('input#ad_licence_key').addClass("ad_green");
+						$('input#ad_licence_key').attr("value", 'Active');						
 					}
 					jQuery(".keyAuthorizeMessage").html("Key Authorization "+ data.license);
 				},

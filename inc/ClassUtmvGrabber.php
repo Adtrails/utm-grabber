@@ -72,11 +72,11 @@ class UtmvGrabberPro {
         register_activation_hook(UTMV_GRABBER_PRO_PLUGIN_FILE, array($this, 'UtmvGrabberPro_plugin_install'));
         add_action('init', array($this, 'init'), 0);
 
-		/* loader */
-		/* $edd_utmv_grabber_license_status = get_option('edd_utmv_grabber_license_status', true);
+				/* loader */
+		$edd_utmv_grabber_license_status = get_option('edd_utmv_grabber_license_status', true);
 		if($edd_utmv_grabber_license_status == 'valid') {
 			add_action('plugins_loaded',array('UtmvGrabber_Updater', 'instance'));
-		} */
+		}
         /* register front end scripts */
         add_action('wp_enqueue_scripts', array($this, 'UtmvGrabberProScripts'), 0);
 
@@ -122,7 +122,7 @@ class UtmvGrabberPro {
 		include_once UTMV_GRABBER_PRO_ABSPATH . '/inc/ClassActions.php';
         include_once UTMV_GRABBER_PRO_ABSPATH . '/inc/ClassShortcodes.php';
         include_once UTMV_GRABBER_PRO_ABSPATH . '/inc/ClassZapier.php';
-        //include_once UTMV_GRABBER_PRO_ABSPATH . '/inc/ClassUpdater.php';
+        include_once UTMV_GRABBER_PRO_ABSPATH . '/inc/ClassUpdater.php';
         if (is_admin()) {
             include_once UTMV_GRABBER_PRO_ABSPATH . '/inc/ClassAdminOptions.php';
         } 		
@@ -166,6 +166,13 @@ class UtmvGrabberPro {
         if (!defined($name)) {
             define($name, $value);
         }
-    }	 
+    }
+	
+	/**
+	 * Define a hooks function of gravity form 
+	 * return html (string)
+	 *
+	 */
+	 
 }
 ?>
