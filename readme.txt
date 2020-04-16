@@ -1,4 +1,4 @@
-# AdTrails UTM Grabber
+# AdTrails UTM Grabber Pro
 
 Contributors: upworksanjeev
 
@@ -8,7 +8,7 @@ Requires at least: 5.0
 
 Tested up to: 5.3
 
-Requires PHP: 7.2
+Requires PHP: 5.3 or greater
 
 Stable tag: 4.3
 
@@ -16,7 +16,7 @@ License: GPLv2 or later
 
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-AdTrails UTM Grabber for CF7
+AdTrails UTM Grabber Premium pushes UTM/GCLID info CF7, Gravity Forms, WP Forms, and Ninja Forms.
 
 ## Description
 
